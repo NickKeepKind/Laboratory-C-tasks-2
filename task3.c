@@ -8,16 +8,16 @@
 #include <stdio.h>
 
 // Function declaration
-int FindBestFuelPrice();
+int ft_Task_3();
 
 int main()
 {
-    FindBestFuelPrice();
+    ft_Task_3();
 
     return 0;
 }
 
-int FindBestFuelPrice()
+int ft_Task_3()
 {
     float price, lowestPrice = 0;
     int stationNumber = 0, bestStation = 0;

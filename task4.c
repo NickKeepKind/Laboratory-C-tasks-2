@@ -8,16 +8,16 @@
 #include <stdio.h>
 
 // Function declaration
-int SmartphoneSavingsTime();
+int ft_Task_4();
 
 int main()
 {
-    SmartphoneSavingsTime();
+    ft_Task_4();
 
     return 0;
 }
 
-int SmartphoneSavingsTime()
+int ft_Task_4()
 {
     const int price = 650;
     int week = 0;

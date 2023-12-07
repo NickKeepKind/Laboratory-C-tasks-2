@@ -8,16 +8,16 @@
 #include <stdio.h>
 
 // Function declaration
-int CalculateMirrorImage();
+int ft_Task_2();
 
 int main()
 {
-    CalculateMirrorImage();
+    ft_Task_2();
 
     return 0;
 }
 
-int CalculateMirrorImage()
+int ft_Task_2()
 {
     long long number, mirror = 0;
 

@@ -8,16 +8,16 @@
 #include <stdio.h>
 
 // Function declaration
-int DisplayNumbers_SumNine();
+int ft_Task_5();
 
 int main()
 {
-    DisplayNumbers_SumNine();  // Displaying numbers with digit sum of nine
+    ft_Task_5();
 
     return 0;
 }
 
-int DisplayNumbers_SumNine()
+int ft_Task_5()
 {
     int num, sum, tempNum;
 
