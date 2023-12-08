@@ -2,7 +2,7 @@
 
 **By**  —  **N**icolaos **T**sitsonis.
 
-📁 **Repository Name**: Six Month Laboratory Exercise №1
+📁 **Repository Name**: Six Month Laboratory Exercise №2
 
 🟨 **Status Badge**: Completed ✔️
 
