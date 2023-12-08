@@ -4,7 +4,7 @@
 
 📁 **Repository Name**: Six Month Laboratory Exercise №1
 
-🟨 **Status Badge**: Currently at work 🛠️
+🟨 **Status Badge**: Completed ✔️
 
 🏷️ **Project Category**: I.E.K Kastoria Study.
 
