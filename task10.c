@@ -13,7 +13,7 @@ int ft_Task_10();
 
 int main()
 {
-    ft_Task_10();  // Managing stamp collector's purchases
+    ft_Task_10();
 
     return 0;
 }

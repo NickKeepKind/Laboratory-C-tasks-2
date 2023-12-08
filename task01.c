@@ -3,65 +3,75 @@
 /*                ΑΣΚΗΣΗ 1.                */
 /*           NICOLAOS TSITSONIS            */
 /*-----------------------------------------*/
+
 // Libraries declaration
 #include <stdio.h>
 #include <string.h>
 
 // Function declaration
-int StampCollectorShopping();
+int ft_Task_1();
 
 int main()
 {
-    StampCollectorShopping();  // Managing the stamp collector's shopping spree
-
+    ft_Task_1();
     return 0;
 }
 
-int StampCollectorShopping()
+int ft_Task_1()
 {
-    const float budget = 1500.0;
-    float price, spent = 0;
-    char origin[10]; // Ensure the origin string is large enough
-    int greekStamps = 0, foreignStamps = 0;
+    char name[100], lowestScorer[100];
+    int g1, g2, g3, highestGrade;
+    float total, lowestScore = 101.0;
 
-    while (spent < budget)
+    while (1)
     {
-        printf("Enter stamp price and origin (Greek/Foreign): ");
-        scanf("%f %s", &price, origin);
+        printf("Enter candidate's name (or END): ");
+        scanf("%s", name);
 
-        // If price exceeds remaining budget, end the purchases
-        if (price > (budget - spent))
+        // Check for termination condition
+        if (strcmp(name, ("END" || "end")) == 0)
         {
-            printf("END OF PURCHASES\n");
             break;
         }
 
-        spent += price;
+        printf("Enter grade for the 1-st subject area: ");
+        scanf("%d", &g1);
+        printf("Enter grade for the 2-nd subject area: ");
+        scanf("%d", &g2);
+        printf("Enter grade for the 3-rd subject area: ");
+        scanf("%d", &g3);
 
-        // Comparing origin and incrementing respective counters
-        if (strcmp(origin, "Greek") == 0)
-        {
-            greekStamps++;
-        }
-        else if (strcmp(origin, "Foreign") == 0)
-        {
-            foreignStamps++;
-        }
+        // Displaying the highest grade
+        highestGrade = g1;
+        if (g2 > highestGrade) highestGrade = g2;
+        if (g3 > highestGrade) highestGrade = g3;
+        printf("Highest grade of %s: %d\n", name, highestGrade);
 
-        // Continues the loop until budget is exceeded
+        // Calculating total score
+        total = (g1 + g2 + g3) / 3.0;
+
+        // Check for successful candidate
+        if (total >= 55 && g1 >= 50 && g2 >= 50 && g3 >= 50)
+        {
+            printf("Successful Candidate: %s, Total Score: %.2f\n", name, total);
+
+            // Check for lowest successful score
+            if (total < lowestScore)
+            {
+                lowestScore = total;
+                strcpy(lowestScorer, name);
+            }
+        }
     }
 
-    printf("Total amount spent: %.2f\n", spent);
-    printf("Greek stamps: %d, Foreign stamps: %d\n", greekStamps, foreignStamps);
-
-    // Check if there's remaining budget
-    if (budget - spent > 0)
+    // Display successful candidate with the lowest score
+    if (lowestScore != 101.0)
     {
-        printf("Remaining amount: %.2f\n", budget - spent);
+        printf("Successful candidate with the lowest score: %s, Score: %.2f\n", lowestScorer, lowestScore);
     }
     else
     {
-        printf("ALL FUNDS EXHAUSTED\n");
+        printf("No successful candidates.\n");
     }
 
     return 0;
