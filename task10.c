@@ -28,7 +28,7 @@ int ft_Task_10()
     while (spent < budget)
     {
         printf("Enter origin of the stamp (Greek / any foreign): ");
-        scanf("%s", origin);
+        scanf("%s", &origin);
         printf("Enter stamp price: ");
         scanf("%f", &stampPrice);
 

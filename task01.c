@@ -26,7 +26,7 @@ int ft_Task_1()
     while (1)
     {
         printf("Enter candidate's name (or END): ");
-        scanf("%s", name);
+        scanf("%s", &name);
 
         // Check for termination condition
         if (strcmp(name, ("END" || "end")) == 0)
